@@ -1,1 +1,1 @@
-console.log("Hello, World! This is JavaScript")
+console.log("Goodbye, World! This was JavaScript")
