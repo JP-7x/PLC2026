@@ -6,7 +6,7 @@ module Main where
 main =
   do
   -- [sizeS] <- getArgs
-  let sizeS = "15"
+  let sizeS = "20"
   sequence_ (map putStrLn (circleLines (read sizeS)))
 
 circleLines :: Integer -> [String]
