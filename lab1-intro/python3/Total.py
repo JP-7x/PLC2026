@@ -5,3 +5,4 @@ while(count <= 10):
     total += count
     count += 1
 print("The total is", total)
+
