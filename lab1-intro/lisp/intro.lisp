@@ -8,7 +8,7 @@
 (setf name2 (if (not (equal name "")) name "no name"))
 
 ;; print returns a value in addition to printing:
-(setf name3 (print "Bob"))
+(setf name3 (print "John Pritchard"))
 
 ;; a program can be treated as data:
 (setf myprogram '(print (+ 1 m))) ;; the tick is important
