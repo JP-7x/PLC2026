@@ -10,7 +10,7 @@ public class Overflow
     {
         boolean haveResult = false;
         int result = 0;
-        Scanner stdin = new Scanner(System.in);
+        Scanner stdin = new Scanner(System.in);             
 
         while ( ! haveResult )
         {
@@ -79,14 +79,14 @@ public class Overflow
     */
     private static List<Float> power_fp(float n, int m)
     {
-        assert m >= 0 : ("illegal power " + m);
+        assert m >= 0 : ("illegal power " + m);                 // error if somehow the power is negative
 
         List<Float> resultList = new LinkedList<Float>();
         float ns = 1;
         for ( int j = 1; j <= m; j++ )
         {
             ns = ns * n;
-//             assert ?? : "Floating-point overflow";
+            assert !Float.isInfinite(ns) : "Floating-point overflow";       // assert ns != ns * 2 : "Floating-point overflow";
             resultList.add(ns);
         }
         return resultList;
@@ -112,7 +112,7 @@ public class Overflow
         for ( int j = 0; j <= m; j++ )
         {
             ns_inv = ns_inv / n; // update from 1/n^(i-1) to 1/n^i
-//             assert ?? : "Floating point underflow";
+            assert ns_inv != 0 : "Floating point underflow";
             geom_sum = ns_inv + geom_sum;
             resultList.add(geom_sum);
         }
